@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MyOrdersActivity"
+    tools:ignore="NotSibling"
+    android:background="@drawable/gradient_my_order_background">
+
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+
+            android:id="@+id/group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/LayoutInLayoutInTop">
+
+                <ImageView
+                    android:id="@+id/back_from_my_order"
+                    style="@style/Arrow" />
+
+                <LinearLayout style="@style/LayoutInTop">
+
+                    <TextView
+                        style="@style/Title"
+                        android:text="Моє замовлення" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/horse_icon_from_my_order"
+                    style="@style/SmallIcon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top">
+
+                <TextView
+                    style="@style/WhiteLine" />
+
+            </LinearLayout>
+
+            <TextView
+
+                style="@style/TextStyle"
+                android:layout_marginTop="10dp"
+                android:text="Заклад:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/line2"
+                style="@style/WhiteLine"
+                android:layout_width="72dp"
+                android:layout_marginBottom="7dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+
+                    android:id="@+id/field_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/field_order"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="false"
+                    android:textSize="24sp" />
+
+                <TextView
+
+                    android:id="@+id/place"
+                    style="@style/TextStyle"
+                    android:layout_alignTop="@id/field_place"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="24sp"
+                    tools:text="Заклад" />
+
+                <TextView
+
+                    android:id="@+id/adress"
+                    style="@style/TextStyle"
+                    android:layout_below="@id/place"
+                    android:layout_alignBottom="@id/field_place"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="18sp"
+                    tools:text="Адреса" />
+
+            </RelativeLayout>
+
+            <TextView
+
+                style="@style/TextStyle"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="1dp"
+                android:text="Замовлення:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/line4"
+                android:layout_width="120dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:background="#FFFFFF" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+            <ListView
+
+                android:id="@+id/list_view_my_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/field_order"
+                android:isScrollContainer="true">
+
+            </ListView>
+
+</ScrollView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/group"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/time_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="30">
+
+                <TextView
+
+                    android:id="@+id/time"
+                    style="@style/TextStyle"
+                    android:layout_alignBottom="@id/list_view_my_order"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="Час:"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/line5"
+                    style="@style/WhiteLine"
+                    android:layout_width="42dp"
+                    android:layout_alignBottom="@id/time"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="-1dp" />
+
+                <TextView
+
+                    android:id="@+id/time_field"
+                    android:layout_width="80dp"
+                    android:layout_height="32dp"
+                    android:layout_alignLeft="@id/time"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="45dp"
+                  android:gravity="center"
+                    android:background="@drawable/field_order"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/total_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="30">
+
+                <TextView
+                    android:id="@+id/total"
+                    style="@style/TextStyle"
+                    android:layout_alignBottom="@id/list_view_my_order"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="Сума:"
+                    android:textSize="20sp" />
+
+                <TextView
+
+                    android:id="@+id/line6"
+                    style="@style/WhiteLine"
+                    android:layout_width="52dp"
+                    android:layout_alignBottom="@id/total"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="-3dp" />
+
+                <TextView
+
+                    android:id="@+id/total_field"
+                    android:layout_width="120dp"
+                    android:layout_height="32dp"
+                    android:layout_alignLeft="@id/total"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="65dp"
+                    android:gravity="center"
+                    android:background="@drawable/field_order"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+
+            android:id="@+id/button_order"
+            style="@style/ButtonStyle"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:layout_weight="1"
+            android:text="Підтвердити замовлення" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>
+

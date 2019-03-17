@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_activity_list_of_my_orders"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/LayoutInLayoutInTop">
+
+        <ImageView
+            android:id="@+id/back_from_my_list_of_orders"
+            style="@style/Arrow" />
+
+        <LinearLayout style="@style/LayoutInTop">
+
+            <TextView
+                style="@style/Title"
+                android:text="Мої замовлення" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/horse_icon_from_my_list_of_orders"
+            style="@style/SmallIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top">
+
+        <TextView
+
+            style="@style/WhiteLine" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+

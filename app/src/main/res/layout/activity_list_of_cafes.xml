@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_list_of_cafes">
+
+    <LinearLayout style="@style/LayoutInLayoutInTop">
+
+        <ImageView
+            android:id="@+id/back_from_cafes"
+            style="@style/Arrow" />
+
+        <LinearLayout style="@style/LayoutInTop">
+
+            <TextView
+                style="@style/Title"
+                android:text="Обрати заклад" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/horse_icon_from_cafes"
+            style="@style/SmallIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top">
+
+        <TextView style="@style/WhiteLine" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/cafe_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top"
+        tools:context=".ListOfCafes" />
+
+</RelativeLayout>

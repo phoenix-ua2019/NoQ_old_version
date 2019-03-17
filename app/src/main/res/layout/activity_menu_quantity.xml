@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_menu_quantity"
+    android:orientation="vertical"
+    tools:context=".QuantityActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/LayoutInLayoutInTop">
+
+            <ImageView
+                android:id="@+id/back_from_quantity"
+                style="@style/Arrow" />
+
+            <LinearLayout
+                style="@style/LayoutInTop">
+
+                <TextView
+                    style="@style/Title"
+                    android:text="Кількість" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/horse_icon_from_quantity"
+                style="@style/SmallIcon" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/line"
+            style="@style/WhiteLine"
+            android:layout_below="@+id/top">
+
+            <TextView
+                style="@style/WhiteLine" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5">
+
+        <ListView
+
+            android:id="@+id/quantity_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <Button
+
+        android:id="@+id/choose_quantity_button"
+        style="@style/ButtonStyle"
+        android:text="Обрати" />
+
+
+</LinearLayout>

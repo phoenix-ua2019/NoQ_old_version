@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@drawable/gradient_activity_list_of_my_orders">
+
+    <TextView
+
+        android:id="@+id/cafe_name"
+        style="@style/TextStyle"
+        android:layout_marginLeft="14dp"
+        android:padding="8dp"
+        android:textSize="20sp"
+        tools:text="Заклад" />
+
+    <TextView
+
+        android:id="@+id/adress_of_cafe"
+        style="@style/TextStyle"
+        android:layout_below="@id/cafe_name"
+        android:layout_marginLeft="14dp"
+        android:padding="8dp"
+        android:textSize="17sp"
+        tools:text="Адреса" />
+
+    <TextView
+
+        android:layout_width="270dp"
+        style="@style/WhiteLine"
+        android:layout_below="@id/cafe_name"
+        android:layout_marginLeft="17dp" />
+
+    <TextView
+
+        android:id="@+id/time_of_order"
+        style="@style/TextStyle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="21dp"
+        android:padding="8dp"
+        android:textSize="20sp"
+        tools:text="Час " />
+
+    <TextView
+
+        style="@style/WhiteLine"
+        android:layout_below="@id/adress_of_cafe"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp" />
+
+</RelativeLayout>

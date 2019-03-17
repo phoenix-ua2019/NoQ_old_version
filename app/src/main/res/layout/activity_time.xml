@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_activity_time_background"
+    android:fillViewport="true"
+    tools:context=".TimeActivity">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ScrollViewSize">
+
+        <LinearLayout style="@style/LayoutInLayoutInTop">
+
+            <ImageView
+                android:id="@+id/back_from_time"
+                style="@style/Arrow" />
+
+            <LinearLayout style="@style/LayoutInTop">
+
+                <TextView
+                    style="@style/Title"
+                    android:text="Час отримання" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/horse_icon_from_time"
+                style="@style/SmallIcon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top">
+
+            <TextView style="@style/WhiteLine" />
+
+        </LinearLayout>
+
+
+        <TimePicker
+
+            android:id="@+id/clock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_weight="5"
+            android:fadeScrollbars="false"
+            android:theme="@style/TimePickerStyle"
+            android:timePickerMode="spinner" />
+
+        <TextView
+
+            android:text="Ви обрали:"
+            style="@style/TextStyle"
+            android:textSize="24dp" />
+
+        <TextView
+
+            android:id="@+id/line2"
+            style="@style/WhiteLine"
+            android:layout_width="118dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="0" />
+
+        <TextView
+
+            android:id="@+id/text_time"
+            style="@style/TextStyle"
+            android:text="Час"
+            android:textSize="24sp" />
+
+        <TextView
+
+            android:id="@+id/line3"
+            style="@style/WhiteLine"
+            android:layout_width="90dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0" />
+
+
+        <Button
+
+            android:id="@+id/submit_time"
+            style="@style/ButtonStyle"
+            android:text="Підтвердити" />
+
+    </LinearLayout>
+
+</ScrollView>
