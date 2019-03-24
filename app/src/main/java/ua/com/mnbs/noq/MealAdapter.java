@@ -17,6 +17,14 @@ public class MealAdapter extends ArrayAdapter<Meal> {
         super(context, 0, meals);
     }
 
+    /**
+     * Метод getView відповідає, за вивід: назви страви, ціни та чекбоксу.
+     *
+     * @param position
+     * @param convertView
+     * @param parent
+     * @return
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
@@ -36,6 +44,11 @@ public class MealAdapter extends ArrayAdapter<Meal> {
         CheckBox mealCheckBox = (CheckBox) listItemView.findViewById(R.id.meal_checkbox);
         currentMeal.setChecked(mealCheckBox.isChecked());
         mealCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            /**
+             * Метод onCheckedChanged відповідає за коректну роботу чекбоксу.
+             * @param buttonView
+             * @param isChecked
+             */
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 currentMeal.setChecked(isChecked);

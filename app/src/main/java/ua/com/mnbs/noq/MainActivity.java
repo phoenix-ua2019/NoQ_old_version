@@ -14,11 +14,22 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * Метод onCreate викликається операційною системою, коли ініціалізується activity.
+     * Встановлює інтерфейс з наступними елементами:
+     * Інформація про користувача,
+     * Кнопки для перегляду замовлень та вибору Cafe.
+     *@param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
+        /**
+         * Кнопка "Зробити замовлення" яка перенаправляє до ListOfCafes.
+         */
         Button Order = (Button) findViewById(R.id.makeOrder);
 
         Order.setOnClickListener(new View.OnClickListener() {
@@ -35,7 +46,10 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-
+        /**
+         *Кнопка "Мої замовлення".
+         *Не завершена.
+         */
         Button myOrders = (Button) findViewById(R.id.myOrders);
 
         myOrders.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Метод finish завершує роботу activity
+     */
     @Override
     public void finish() {
         super.finish();
