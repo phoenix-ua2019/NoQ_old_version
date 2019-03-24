@@ -22,6 +22,13 @@ public class ListOfMeals extends AppCompatActivity {
 
     boolean wasShownToast = false;
 
+    /**
+     * Метод onCreate викликається операційною системою, коли ініціалізується activity.
+     * Встановлює інтерфейс з наступними елементами:
+     * Список страв, їх цін та відповідних чекбоксів,
+     * Кнопка, яка повертає на MainActivity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +74,13 @@ public class ListOfMeals extends AppCompatActivity {
         meals.get(0).numberOfCheckedItems = 0;
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            /**
+             * Метод onItemClick відповідає за роботу чекбоксу при виборі страви.
+             * @param adapter
+             * @param v
+             * @param position
+             * @param l
+             */
             @Override
             public void onItemClick(AdapterView<?> adapter, View v, int position, long l) {
                 if (v != null) {
@@ -77,6 +91,9 @@ public class ListOfMeals extends AppCompatActivity {
 
         });
 
+        /**
+         * Створюється кнопка backButton, яка повертає на MainActivity
+         */
         ImageView buttonToMain = (ImageView) findViewById(R.id.horse_icon_from_menu);
 
         buttonToMain.setOnClickListener(new View.OnClickListener() {
@@ -91,12 +108,19 @@ public class ListOfMeals extends AppCompatActivity {
         ImageView backButton = (ImageView) findViewById(R.id.back_from_menu) ;
 
         backButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Завершує роботу данної activity.
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
 
+        /**
+         * Кнопка, яка відповідає за обробку обраних страв.
+         */
         chooseDishes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -182,6 +206,9 @@ public class ListOfMeals extends AppCompatActivity {
         return meals;
     }
 
+    /**
+     * Завершує роботу данної activity.
+     */
     @Override
     public void finish() {
         super.finish();
