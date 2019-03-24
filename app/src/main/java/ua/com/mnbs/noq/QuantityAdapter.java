@@ -1,7 +1,6 @@
 package ua.com.mnbs.noq;
 
 import android.app.Activity;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +24,7 @@ public class QuantityAdapter extends ArrayAdapter<Meal> {
                     R.layout.quantity_item, parent, false);
         }
         final Meal currentMeal = getItem(position);
-
+// зображення інформації по даному об'єкті зі списку
         TextView mealNameTextView = (TextView) listItemView.findViewById(R.id.meal_name_text_view);
         mealNameTextView.setText(currentMeal.getMealName());
 
@@ -34,7 +33,7 @@ public class QuantityAdapter extends ArrayAdapter<Meal> {
 
         final TextView quantityTextView = (TextView) listItemView.findViewById(R.id.quantity_text_view);
         quantityTextView.setText(String.valueOf(currentMeal.getQuantity()));
-
+// виконання функції по додаванню об'єктів до замовлення
         Button plusButton = (Button) listItemView.findViewById(R.id.plus_button);
         plusButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +46,7 @@ public class QuantityAdapter extends ArrayAdapter<Meal> {
 
             }
         });
-
+// віднімання об'єктів від замовлення
         Button minusButton = (Button) listItemView.findViewById(R.id.minus_button);
         minusButton.setOnClickListener(new View.OnClickListener() {
             @Override

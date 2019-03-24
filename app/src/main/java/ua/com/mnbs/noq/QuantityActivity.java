@@ -1,23 +1,12 @@
 package ua.com.mnbs.noq;
 
-import android.app.LauncherActivity;
 import android.content.Intent;
-import android.graphics.Path;
-import android.location.Location;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 
 public class QuantityActivity extends AppCompatActivity {
@@ -41,7 +30,7 @@ public class QuantityActivity extends AppCompatActivity {
         final int positionForBackButton = extras.getInt("position for intent");
 
        meals = new ArrayList<>();
-
+// отримується інформація з обраних користувачем страв
         String tempName = "";
         String tempPrice = "";
         for (int i=0; i<numberOfCheckedItems; i++){
@@ -79,7 +68,7 @@ public class QuantityActivity extends AppCompatActivity {
         chooseQuantity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+// отримання даниї про користувача, місце замолвення і адресу, кількість обраних страв
                 Intent OpenTimeActivity = new Intent(QuantityActivity.this, TimeActivity.class);
                 OpenTimeActivity.putExtra("UserName", userName);
                 OpenTimeActivity.putExtra("cafe name", nameOfCafeForBackButton);

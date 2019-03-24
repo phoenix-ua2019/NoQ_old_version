@@ -131,7 +131,7 @@ public class TimeActivity extends AppCompatActivity {
         });
     }
 
-
+// функція виконує встановлення поточного часу і передачу його до інших функцій
     private void updateDisplay(int hour, int minute) {
         Integer orderHour = hour;
         Integer orderMinute = minute;
@@ -139,7 +139,7 @@ public class TimeActivity extends AppCompatActivity {
         orderTime.setText(mOrderTime);
     }
 
-
+// функція одержує поточний час
     private String updateDisplay() {
         Integer currentHour = floatTime.getHour();
         Integer currentMinute = floatTime.getMinute();
@@ -147,7 +147,7 @@ public class TimeActivity extends AppCompatActivity {
         return mOrderTime;
     }
 
-
+// запис поточного дійсного числа в форматі String
     private String fixZero(Integer num) {
         String stringNum;
         if (num < 10) {
@@ -160,7 +160,7 @@ public class TimeActivity extends AppCompatActivity {
     }
 
 
-
+// передача часу у форматі String
     private String convertTime(Integer hour, Integer minute) {
         String convertedTime = fixZero(hour);
         convertedTime += ":";
@@ -169,7 +169,7 @@ public class TimeActivity extends AppCompatActivity {
     }
 
 
-
+// перевірка на правильність часу замовлення
     private boolean isAllowableTime(int orderHour, Integer currentHour, int orderMinute, Integer currentMinute) {
 
         if (orderHour < currentHour) {
@@ -196,7 +196,7 @@ public class TimeActivity extends AppCompatActivity {
     }
 
 
-
+// каунтер хвилин
     private int cutMinute(int minute){
         if (minute >= minutesInHour){
             minute -= minutesInHour;
@@ -205,7 +205,7 @@ public class TimeActivity extends AppCompatActivity {
     }
 
 
-
+// не впевнений, але ця функція перевіряє, скільки часу пройшло з початку прийому замовлення
     private boolean isNearNewHour(Integer currentMinute){
         if (minutesInHour - preparationTime <= currentMinute){
             return true;
@@ -214,7 +214,7 @@ public class TimeActivity extends AppCompatActivity {
     }
 
 
-
+// вказівник на доступність замовлення в даний момент часу
     private boolean isCafeOpen(int orderHour, int orderMinute) {
         if (orderHour > closingHour) {
             if (!wasShownTooLateToast) {
@@ -248,7 +248,7 @@ public class TimeActivity extends AppCompatActivity {
         return true;
     }
 
-
+//перевірка часу приготування
     private boolean checkPreparationTime(int orderHour, int orderMinute, int currentHour, int currentMinute) {
         if (isNearNewHour(currentMinute)) {
             if (orderHour == currentHour) {
