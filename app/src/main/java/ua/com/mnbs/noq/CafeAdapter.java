@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class CafeAdapter extends ArrayAdapter<Cafe> {
 
-    CafeAdapter(Activity context, ArrayList<Cafe> cafes) {
+    public CafeAdapter(Activity context, ArrayList<Cafe> cafes) {
         super(context, 0, cafes);
     }
 
@@ -25,18 +25,18 @@ public class CafeAdapter extends ArrayAdapter<Cafe> {
         }
         Cafe currentCafe = getItem(position);
 
-        TextView cafeNameTextView = (TextView) listItemView.findViewById(R.id.cafe_name_text_view);
+        TextView cafeNameTextView = listItemView.findViewById(R.id.cafe_name_text_view);
         cafeNameTextView.setText(currentCafe.getCafeName());
 
-        ImageView imageView = (ImageView) listItemView.findViewById(R.id.cafe_icon_view);
+        ImageView imageView = listItemView.findViewById(R.id.cafe_icon_view);
         if (currentCafe.hasImage()) {
             imageView.setImageResource(currentCafe.getDrawableId());
         } else {
             imageView.setVisibility(View.GONE);
         }
-            TextView cafeLocationTextView = (TextView) listItemView.findViewById(R.id.cafe_location_text_view);
-            cafeLocationTextView.setText(currentCafe.getCafeLocation());
-            return listItemView;
+        TextView cafeLocationTextView = listItemView.findViewById(R.id.cafe_location_text_view);
+        cafeLocationTextView.setText(currentCafe.getCafeLocation());
+        return listItemView;
 
     }
 }

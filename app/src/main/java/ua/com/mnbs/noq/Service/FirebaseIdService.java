@@ -7,7 +7,6 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.v4.app.NotificationBuilderWithBuilderAccessor;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
@@ -19,12 +18,12 @@ import java.util.Random;
 import ua.com.mnbs.noq.R;
 
 public class FirebaseIdService extends FirebaseMessagingService {
+
     @Override
     public void onNewToken(String s) {
         super.onNewToken(s);
         Log.d("TOKENFIREBASE",s);
     }
-
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
@@ -34,9 +33,9 @@ public class FirebaseIdService extends FirebaseMessagingService {
 
     private void ShowNotification(String title, String body) {
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        String NOTIFICATION_CHANNEL_ID="ua.com.mnbs.noq.test";
+        String NOTIFICATION_CHANNEL_ID = "ua.com.mnbs.noq.test";
 
-        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID,"Notification",
                     NotificationManager.IMPORTANCE_HIGH);
             notificationChannel.setDescription("M&B's channel");
@@ -45,7 +44,7 @@ public class FirebaseIdService extends FirebaseMessagingService {
             notificationChannel.setVibrationPattern(new long[]{0,1000,500,1000});
             notificationManager.createNotificationChannel(notificationChannel);
         }
-        NotificationCompat.Builder notificationBulider= new NotificationCompat.Builder(this,NOTIFICATION_CHANNEL_ID);
+        NotificationCompat.Builder notificationBulider = new NotificationCompat.Builder(this,NOTIFICATION_CHANNEL_ID);
         notificationBulider.setAutoCancel(true)
                 .setDefaults(Notification.DEFAULT_ALL)
                 .setWhen(System.currentTimeMillis())
