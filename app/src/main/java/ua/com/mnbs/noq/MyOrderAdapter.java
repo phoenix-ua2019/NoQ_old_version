@@ -5,11 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -18,6 +14,14 @@ public class MyOrderAdapter extends ArrayAdapter<Meal> {
         super(context, 0, meals);
     }
 
+    /**
+     * цей метод підставляє дані в форму.
+     * тобто він для кожної позиції в кожному елементі ListView підставляє те що потрібно.
+     * @param position
+     * @param convertView
+     * @param parent
+     * @return
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
