@@ -1,6 +1,5 @@
 package ua.com.mnbs.noq;
 
-import android.app.LauncherActivity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
